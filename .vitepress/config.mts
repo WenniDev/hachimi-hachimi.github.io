@@ -4,6 +4,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Hachimi",
   description: "Game enhancement and translation mod for UM:PD",
+  head: [
+    ['link', { rel: "shortcut icon", href: "/favicon.ico"}]
+  ],
   themeConfig: {
     logo: "/assets/logo.png",
 
