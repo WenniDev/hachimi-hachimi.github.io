@@ -85,3 +85,7 @@ Nope. Just open the game back up again and it should ask you to start downloadin
 - What's that `.tl_repo_cache` file in my Hachimi folder? Can I eat it?
 
 No. It's used to track the current state of the translation files for incremental updates later on; do not modify it manually or delete it.
+
+- How do I use another mod with Hachimi?
+
+See the `load_libraries` option on the [Config page](/docs/config).

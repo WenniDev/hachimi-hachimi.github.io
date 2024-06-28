@@ -22,5 +22,5 @@ Game enhancement and translation mod for UM:PD.
 - **Easy setup:** Just plug and play. All setup is done within the game itself, no external application needed.
 - **Translation auto update:** Built-in translation updater lets you play the game as normal while it updates, and reloads it in-game when it's done, no restart needed!
 - **Built-in GUI:** Comes with a config editor so you can modify settings without even exiting the game!
-- **Graphics settings:** You can increase the game's graphics to make full use of your device's specs.
-- **Cross-platform:** Designed from the ground up to be portable, with first class Android support.
+- **Graphics settings:** You can adjust the game's graphics settings to make full use of your device's specs, such as FPS unlocking and resolution scaling.
+- **Cross-platform:** Designed from the ground up to be portable, with Windows and Android support.
