@@ -1,8 +1,33 @@
 # Getting started
 
+## Compatibility
+
+Please check the compatibility before installing.
+
+### Windows
+| Version | Works |
+| --- | :---: |
+| JP | ✅ |
+| KR | ⚠️ |
+
+### Android
+
+| Version | Normal install | Direct install |
+| --- | :---: | :---: |
+| JP | ✅ | ✅ |
+| KR | ⚠️ | ⚠️ |
+| TW GP | ⚠️ | ❔ |
+| TW MC | ⚠️ | ⚠️ |
+- ✅ - Fully supported.
+- ⚠️ - Works, but the game itself won't due to external circumstances (e.g. the AC triggering).
+- ❔ - Might work, don't count on it.
+- ❌ - Not supported.
+
+
 ## Installation
 
 ### Windows
+
 ::: warning
 It's recommended that you remove any other translation patches before continuing as they might conflict with Hachimi, especially Trainers' Legend G, which will not work with Hachimi at all.
 :::
@@ -11,40 +36,31 @@ It's recommended that you remove any other translation patches before continuing
 - Manually: Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in the game's install directory. Rename it to `dxgi.dll`, `winhttp.dll` or `version.dll`.
 
 ### Android
-The easiest way to install is by using [UmaPatcher](https://github.com/LeadRDRK/UmaPatcher) which will modify the APK for you.
 
-1. Download and install the latest version of UmaPatcher from the [Releases page](https://github.com/LeadRDRK/UmaPatcher/releases).
-2. Prepare an APK file of the game.
-3. Open UmaPatcher and choose "Select and patch a file". Pick the APK file that you had prepared.
-4. Choose "Save patched APK file" as the install method and tap on Patch.
-5. Upon completion, it will ask you to save the file. Save it somewhere you could easily access later.
-6. Open your file manager and open the ***patched*** APK file to install it. Do not install the original APK.
-7. (Optional, recommended) Delete both APK files.
-
-You'll need to repeat this process from step 2 again whenever the app updates.
+The easiest way to install is by using [UmaPatcher](https://github.com/LeadRDRK/UmaPatcher) which will modify the APK for you. It's recommended that you not have the game already installed before using this.
 
 ::: danger
-If you have installed the game before, you must uninstall it before installing the patched version for the first time. You can update the game later without uninstalling it by installing another patched version.
+If you have already installed the game, you must uninstall it before installing the patched version for the first time. You can update the game later without uninstalling it by installing another patched version.
 :::
 
-::: warning
-The default filename for the patched file is always "patched.apk". Whenever duplicate files are present, it'll be named like "patched.apk (1)" instead when saved. It's recommended that you delete old APK files after installing or pick another name for the file to prevent any confusion.
-:::
+1. Download and install the latest version of UmaPatcher from the [Releases page](https://github.com/LeadRDRK/UmaPatcher/releases).
+2. Prepare an installation package for the game, which can be:
+    - **Split APK files:** A base APK file and one of the split config APKs (config.arm64_v8a, config.armeabi-v7a, etc.),
+    choose only one split config that's suitable for your device.
+    This is currently only used by the JP version.
+    - **Single APK file**: A full, fat APK file.
+    - **XAPK file**: A ZIP file that contains the split APK files (with the extension renamed to XAPK).
+3. Open UmaPatcher and choose "Normal install". Select the file(s) that you have prepared.
+4. Tap on Patch to start the patching and installation process.
+
+You'll need to repeat this process from step 2 again whenever the app updates.
 
 #### For rooted users
 UmaPatcher includes a rooted install option that doesn't require you to uninstall the game and let the game update normally from any app store.
 
-Instead of selecting the APK and patching it before installing, you should install it first then pick "Get APK file from installed app" and "Direct install" as the install method. This will mount a patched app on top of the existing app and replaces some of the app's native libraries.
+With the game installed, tap on the card on top of the home screen to select the app that you want to patch (if needed). Then select "Direct install" as the install method and tap on Patch. No input files are needed.
 
 You'll need to install it again whenever the app updates.
-
-::: warning
-You MUST unmount the app before installing an update. This can be done by pressing on the "Unmount" button that appears after you've installed the mod through the "Direct install" method.
-:::
-
-::: info
-Some devices don't even need it mounted, so you could just unmount it immediately after installing.
-:::
 
 #### Manually
 1. Build or download the prebuilt libraries from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases).
