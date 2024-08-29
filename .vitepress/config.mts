@@ -17,20 +17,46 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'About Hachimi',
-        link: "/docs/"
+        text: "Hachimi",
+        collapsed: false,
+        base: "/docs/hachimi/",
+        items: [
+          {
+            text: 'About',
+            link: "about"
+          },
+          {
+            text: 'Getting Started',
+            link: "getting-started"
+          },
+          {
+            text: 'Troubleshooting',
+            link: "troubleshooting"
+          },
+          {
+            text: 'Built-in GUI',
+            link: "built-in-gui"
+          },
+          {
+            text: 'Config',
+            link: "config"
+          },
+          {
+            text: 'FAQs',
+            link: "faqs"
+          }
+        ]
       },
       {
-        text: 'Getting Started',
-        link: "/docs/getting-started"
-      },
-      {
-        text: 'Built-in GUI',
-        link: "/docs/built-in-gui"
-      },
-      {
-        text: 'Config',
-        link: "/docs/config"
+        text: "Translation guide",
+        collapsed: false,
+        base: "/docs/translation-guide/",
+        items: [
+          {
+            text: 'About',
+            link: "about"
+          }
+        ]
       }
     ],
 

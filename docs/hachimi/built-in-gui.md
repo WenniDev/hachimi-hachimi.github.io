@@ -10,7 +10,7 @@ The menu can be opened by pressing a key or a button combination. This is differ
 
 **Note:** While the menu or a dialog from Hachimi is open, it will block all inputs from the system from reaching the game. You must close all of them in order to regain control to the game.
 
-(\*) This key can be rebinded. See the `menu_open_key` option on the [Config page](/docs/config).
+(\*) This key can be rebound. See the `menu_open_key` option on the [Config page](/docs/config).
 
 ## Config
 - **Open config editor:** This is where you can edit the config file in-game. Please see the Config page to see details about each option.
@@ -33,3 +33,4 @@ Enough fearmongering, if you're still interested, here's what they do and what y
 
 - **Soft restart:** Triggers an error in the game and forces the user to confirm a restart, which simply resets itself to the title screen. This is a quick way to apply some graphics settings that otherwise wouldn't apply until you actually closed the game and opened it back up again. **Obviously, don't use it while you're playing, you can't cancel it.**
 - **Open in-game browser:** (Android only) This is actually relatively safe to use, it just opens up the in-game browser, which can be used to browse the web (~~or play DOOM~~) without leaving the game. Opens up Google by default, can be configured. It's listed here because it may interfere with the game's dialog system. Just don't open it up while the game is trying to prompt you for something else.
+- **Toggle game UI:** Enable/disable all of the currently active game UI objects. Any objects created after the toggle was activated will not be affected. Might restore the UI active states incorrectly (e.g. enabling objects that weren't supposed to be on) but shouldn't cause any harm in most cases.
