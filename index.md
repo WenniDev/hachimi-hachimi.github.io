@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /docs/getting-started
+      link: /docs/hachimi/getting-started.html
     - theme: alt
       text: View on GitHub
       link: https://github.com/Hachimi-Hachimi/Hachimi
