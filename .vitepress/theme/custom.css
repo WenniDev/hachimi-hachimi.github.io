@@ -3,8 +3,57 @@
     --vp-c-brand-2: #cd8704;
     --vp-c-brand-3: #e8a019;
     --vp-c-brand-soft: rgba(225, 171, 8, 0.14);
+    --vp-nav-bg-color: rgba(255, 255, 255, 0.8);
+    --vp-home-hero-image-background-image: radial-gradient(rgba(237, 122, 34, 0.5) 50%, rgba(250, 188, 74, 0.5));
+    --vp-home-hero-image-filter: blur(44px);
+}
+
+.dark {
+    --vp-nav-bg-color: rgba(27, 27, 31, 0.8);
 }
 
 img {
     max-height: 400px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    max-height: unset;
+}
+
+.gallery > .item {
+    padding: 8px;
+}
+
+.gallery > .item.grid-4 {
+    flex-basis: 100%;
+}
+
+@media (min-width: 640px) {
+    :root {
+        --vp-home-hero-image-filter: blur(56px);
+    }
+
+    .gallery > .item.grid-4 {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 960px) {
+    :root {
+        --vp-home-hero-image-filter: blur(68px);
+    }
+
+    .gallery > .item.grid-4 {
+        flex-basis: 25%;
+    }
+
+    .VPNavBar:not(.home.top) {
+        backdrop-filter: blur(12px);
+    }
 }

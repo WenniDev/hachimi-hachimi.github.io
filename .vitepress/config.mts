@@ -12,6 +12,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Screenshots', link: '/#screenshots' },
       { text: 'Docs', link: '/docs' }
     ],
 
