@@ -24,6 +24,7 @@ img {
 
 .gallery img {
     max-height: unset;
+    height: none;
 }
 
 .gallery > .item {
@@ -31,7 +32,7 @@ img {
 }
 
 .gallery > .item.grid-4 {
-    flex-basis: 100%;
+    width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -40,7 +41,7 @@ img {
     }
 
     .gallery > .item.grid-4 {
-        flex-basis: 50%;
+        width: 50%;
     }
 }
 
@@ -50,7 +51,7 @@ img {
     }
 
     .gallery > .item.grid-4 {
-        flex-basis: 25%;
+        width: 25%;
     }
 
     .VPNavBar:not(.home.top) {
