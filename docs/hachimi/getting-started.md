@@ -5,7 +5,7 @@
 Please check the compatibility before installing.
 
 ### Windows
-| Version | Works |
+| Version | Supported |
 | --- | :---: |
 | JP | ✅ |
 | KR | ⚠️ |
@@ -33,7 +33,7 @@ It's recommended that you remove any other translation patches before continuing
 :::
 
 - Using the installer: Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it and click on Install. No need to modify any of the options if you don't know what they mean.
-- Manually: Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in the game's install directory. Rename it to `dxgi.dll`, `winhttp.dll` or `version.dll`.
+- Manually: Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in the game's install directory. Rename it to `dxgi.dll` or `opengl32.dll`.
 
 ### Android
 
