@@ -65,5 +65,15 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/Hachimi-Hachimi/Hachimi' },
       { icon: 'discord', link: 'https://discord.gg/BVEt5FcxEn' }
     ]
+  },
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en'
+    },
+    vi: {
+      label: 'Tiếng Việt',
+      lang: 'vi'
+    }
   }
 })
