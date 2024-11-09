@@ -43,6 +43,10 @@ The easiest way to install is by using [UmaPatcher](https://github.com/LeadRDRK/
 If you have already installed the game, you must uninstall it before installing the patched version for the first time. You can update the game later without uninstalling it by installing another patched version.
 :::
 
+::: danger
+Do not get your APK from APKPure, it's known to cause problems.
+:::
+
 1. Download and install the latest version of UmaPatcher from the [Releases page](https://github.com/LeadRDRK/UmaPatcher/releases).
 2. Prepare an installation package for the game, which can be:
     - **Split APK files:** A base APK file and one of the split config APKs (config.arm64_v8a, config.armeabi-v7a, etc.),
