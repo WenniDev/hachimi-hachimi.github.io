@@ -54,8 +54,16 @@ export default defineConfig({
         base: "/docs/translation-guide/",
         items: [
           {
-            text: 'About',
-            link: "about"
+            text: 'Welcome',
+            link: "welcome"
+          },
+          {
+            text: 'Translation system',
+            link: "translation-system"
+          },
+          {
+            text: "Using ZokuZoku",
+            link: "using-zokuzoku"
           }
         ]
       }
