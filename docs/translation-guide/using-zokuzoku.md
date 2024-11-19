@@ -24,18 +24,6 @@ Download the .vsix file for the latest version on the [Releases](https://github.
 
 ![Translation section in menu](/assets/translation-guide/using-zokuzoku/3.webp)
 
-### Configuring Hachimi for translation work
-This is technically optional, but it's highly recommended to modify Hachimi's config file so that you could easily view your new translations in game.
-
-With Hachimi already installed and set up previously, edit the config file at `[Game data dir]/hachimi/config.json`. Create a backup of the config file before editing so you can easily switch between the upstream TL repo and your current working copy later by simply renaming the files.
-
-Set the `localized_data_dir` value to the fully qualified path of the `localized_data` folder in your local translation repo copy, e.g:
-```json
-"localized_data_dir": "C:\\path\\to\\hachimi-tl-en\\localized_data"
-```
-
-Note that on Windows, where there are backslash characters in the path, you must add an extra `\` per character as shown above. Make sure keep the comma at the end of the line if it was present.
-
 ## Initial setup
 After installing ZokuZoku, you can now open the translation repo by going to File -> Open Folder... and select the folder you want to open. *Note that it should be a folder that contains the `localized_data` folder, not the `localized_data` folder itself!*
 
@@ -72,6 +60,13 @@ The outer sections of the panel (all stories, home dialogues, etc.) are referred
 
 Some of these views will display a checkbox next to the entries' name. It tells you whether the dict for that asset exists or not.
 ![Lyrics view with checkboxes](/assets/translation-guide/using-zokuzoku/10.webp)
+
+## Switching translation folder
+The first thing you might want to do before editing anything is to switch the Hachimi translation folder (also known as the localized data directory) to your local working copy of the translations. This will make Hachimi load translations from your local copy instead of the upstream repo so you can preview them in-game if needed.
+
+To do this, open the "Hachimi Controls" view in the panel. Click on the "Set translation folder" button to set it. When you're done working on the translations, remember to click on the "Revert translation folder" button to revert it.
+
+![Hachimi Controls view](/assets/translation-guide/using-zokuzoku/26.webp)
 
 ## Editors
 ### Annoying quirk
