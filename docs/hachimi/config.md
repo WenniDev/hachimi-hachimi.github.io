@@ -21,6 +21,15 @@ The config file can be found at one of these locations:
 - `disable_translations`: Disables translation features.
 - `ui_scale`: The UI scale factor. Default: `1.0` (no scaling).
 - `graphics_quality`: Possible values: `Default`, `Toon1280`, `Toon1280x2`, `Toon1280x4`, `ToonFull`, `Max`.
+- `story_choice_auto_select_delay`: The choice select delay in seconds when using story auto mode. Default: `0.75` (seconds)
+- `story_tcps_multiplier`: The story text speed ("typewriting count per second") multiplier. Default: `1.0`
+- `enable_ipc`: Enables the HTTP inter-process communication server which allows other programs to control the game. Intended for use with translation tools.
+- `ipc_listen_all`: Accepts IPC commands from any devices on the network. **You should NOT enable this option if you don't have a need for it.**
+- `force_allow_dynamic_camera`: Forces the game to let you select dynamic camera (aka POV camera, jockey camera, etc.) in any type of race.
+- `live_theater_allow_same_chara`: Forces the game to allow you to select the same character multiple times for the live concert formation. Also disables auto formation saves. **Do NOT attempt to manually save your duplicated formations.**
+- `sugoi_url`: The URL to a Sugoi Offline Translator or compatible translation server for auto translations. You do not need to set this option if you're using a typical Sugoi setup. Default: `http://127.0.0.1:14366`
+- `auto_translate_stories`: Allows translating stories through the auto translator.
+- `auto_translate_localize`: Allows translating UI text through the auto translator. This is generally NOT recommended since most translators do not properly preserve line breaks or formatting tags.
 
 ### Windows only
 - `vsync_count`: The VSync count. Set it to 1 to match your monitor's refresh rate. Refer to the [Unity docs](https://docs.unity3d.com/ScriptReference/QualitySettings-vSyncCount.html) for more info.

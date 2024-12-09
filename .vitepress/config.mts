@@ -45,6 +45,10 @@ export default defineConfig({
           {
             text: 'FAQs',
             link: "faqs"
+          },
+          {
+            text: 'Auto translation',
+            link: "auto-translation"
           }
         ]
       },
