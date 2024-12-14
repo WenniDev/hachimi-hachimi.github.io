@@ -28,12 +28,18 @@ Please check the compatibility before installing.
 
 ### Windows
 
-::: warning
-It's recommended that you remove any other translation patches before continuing as they might conflict with Hachimi, especially Trainers' Legend G, which will not work with Hachimi at all.
-:::
+You'll need to install **both** of these things:
 
-- Using the installer: Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it and click on Install. No need to modify any of the options if you don't know what they mean.
-- Manually: Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in the game's install directory. Rename it to `dxgi.dll` or `opengl32.dll`.
+- **Hachimi**
+    - Using the installer: Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it and click on Install. No need to modify any of the options if you don't know what they mean.
+    - Manually: Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in `C:\Windows\System32` as `cri_mana_vpx.dll`.
+- **Shinmy (DMM shim)**
+    - Using the installer: Download the latest `shinmy_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Shinmy/releases). Run it and click on Install. No need to modify any of the options if you don't know what they mean. In case the installer fails to detect DMM's install folder, you will need to select it manually.
+    - Manually: Download the latest `shinmy_mallet.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in DMM's install directory. Rename it to `version.dll` or `winhttp.dll`.
+
+::: warning
+After installing Shinmy, every time you start DMM, multiple programs with a name similar to `shinmy.exe` will attempt to start along with the launcher. Please choose "Yes" on the UAC prompt for all of them if it shows up, this is required for the shim to work properly.
+:::
 
 ### Android
 
