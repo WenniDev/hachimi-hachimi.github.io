@@ -35,7 +35,7 @@ Bạn sẽ phải cài đặt **cả hai** thứ này:
     - Thủ công: Tải về file `hachimi.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases) và di chuyển nó vào `C:\Windows\System32`, đặt tên là `cri_mana_vpx.dll`.
 - **Shinmy (shim dành cho DMM)**
     - Sử dụng trình cài đặt: Tải về file `shinmy_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Shinmy/releases). Mở nó lên và nhấn vào nút Install. Không cần chỉnh sửa các tùy chọn nếu bạn không biết công dụng của chúng. Trong trường hợp trình cài đặt không thể tìm thấy thư mục cài đặt của DMM, bạn sẽ phải tự chọn nó.
-    - Thủ công: Tải về file `shinmy_mallet.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases) và di chuyển nó vào thư mục cài đặt DMM. Đổi tên thành `version.dll` hoặc `winhttp.dll`.
+    - Thủ công: Tải về file `shinmy_mallet.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Shinmy/releases) và di chuyển nó vào thư mục cài đặt DMM. Đổi tên thành `version.dll` hoặc `winhttp.dll`.
 
 ::: warning
 Sau khi cài đặt Shinmy, mỗi lần mà bạn mở DMM lên, nhiều chương trình có tên như `shinmy.exe` sẽ cố gắng chạy cùng nó. Hãy cho phép tất cả các chương trình đó chạy để shim có thể hoạt động đúng cách.
