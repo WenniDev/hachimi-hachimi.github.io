@@ -28,7 +28,7 @@ Please check the compatibility before installing.
 
 ### Windows
 
-Hachimi currently supports two loading methods with different installation procedures. **Choose only one method, and either use the installer or do it manually, do NOT use multiple things at once.**
+As of v0.13.0, Hachimi currently supports two loading methods with different installation procedures. **Choose only one method, and either use the installer or do it manually, do NOT use multiple things at once.**
 
 #### Method 1: DotLocal DLL redirection (UnityPlayer.dll) (recommended)
 
