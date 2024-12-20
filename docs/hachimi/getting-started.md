@@ -28,18 +28,42 @@ Please check the compatibility before installing.
 
 ### Windows
 
+Hachimi currently supports two loading methods with different installation procedures. **Choose only one method, and either use the installer or do it manually, do NOT use multiple things at once.**
+
+#### Method 1: DotLocal DLL redirection (UnityPlayer.dll) (recommended)
+
+- **Using the installer:** Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it, **choose "UnityPlayer.dll" as the target** and click on Install.
+
+::: info
+When installing for the first time, the installer might ask to you enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You will need to restart your computer after enabling for it to work.**
+:::
+
+- **Manually**
+1. Refer to the "Configure the registry" section in [this article](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry) to enable DLL redirection. Restart your computer after you're done.
+2. Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases).
+3. In the game install folder, create a new folder named `umamusume.exe.local` and move the downloaded DLL file there. Rename it to `UnityPlayer.dll`.
+
+#### Method 2: Plugin shimming (cri_mana_vpx.dll)
+
 You'll need to install **both** of these things:
 
 - **Hachimi**
-    - Using the installer: Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it and click on Install. No need to modify any of the options if you don't know what they mean.
-    - Manually: Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in `C:\Windows\System32` as `cri_mana_vpx.dll`.
+    - **Using the installer:** Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it, **choose "cri_mana_vpx.dll" as the target** and click on Install.
+    - **Manually:** Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in `C:\Windows\System32` as `cri_mana_vpx.dll`.
 - **Shinmy (DMM shim)**
-    - Using the installer: Download the latest `shinmy_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Shinmy/releases). Run it and click on Install. No need to modify any of the options if you don't know what they mean. In case the installer fails to detect DMM's install folder, you will need to select it manually.
-    - Manually: Download the latest `shinmy_mallet.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Shinmy/releases) and put it in DMM's install directory. Rename it to `version.dll` or `winhttp.dll`.
+    - **Using the installer:** Download the latest `shinmy_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Shinmy/releases). Run it and click on Install. No need to modify any of the options if you don't know what they mean. In case the installer fails to detect DMM's install folder, you will need to select it manually.
+    - **Manually:** Download the latest `shinmy_mallet.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Shinmy/releases) and put it in DMM's install directory. Rename it to `version.dll` or `winhttp.dll`.
 
 ::: warning
 After installing Shinmy, every time you start DMM, multiple programs with a name similar to `shinmy.exe` will attempt to start along with the launcher. Please choose "Yes" on the UAC prompt for all of them if it shows up, this is required for the shim to work properly.
 :::
+
+#### Migrating from method 2 to method 1
+You might want to switch from method 2 to method 1, however this process is not exactly straightforward compared to the opposite (for 1 -> 2, just uninstall and reinstall). 
+
+You will need to cleanly uninstall Shinmy first; make sure that it isn't running when you're deleting it because it survives for up to 30 seconds after DMM closes and can restore itself. **The easiest way to do this is to just use the installer** (which also happens to be an uninstaller), it will clean up everything properly for you.
+
+After that, you can just uninstall Hachimi as normal.
 
 ### Android
 
