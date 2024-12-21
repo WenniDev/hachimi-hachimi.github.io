@@ -28,14 +28,39 @@ Hãy kiểm tra độ tương thích trước khi cài đặt.
 
 ### Windows
 
+Tính đến phiên bản v0.13.0, Hachimi hiện đang hỗ trợ 2 cách chạy với các bước cài đặt khác nhau. **Chỉ chọn một cách chạy duy nhất, và chỉ sử dùng trình cài đặt hoặc cài đặt bằng cách thủ công, ĐỪNG dùng nhiều thứ cùng lúc.**
+
+#### Cách 1: DotLocal DLL redirection (UnityPlayer.dll) (khuyên dùng)
+
+::: warning
+Một số ch.trình chống hack như Vanguard sẽ phát hiện bạn sử dụng tính năng DLL redirection, ngay cả khi nó không ảnh hưởng trực tiếp đến game mà nó đăng bảo vệ. Sử dụng cách 2 hoặc tắt DLL redirection mỗi khi bạn muốn chơi game sử dụng Vanguard hoặc một ch.trình chống hack khác kiểm tra giống như vậy.
+:::
+
+- Sử dụng trình cài đặt: Tải về file `hachimi_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases). Mở nó lên, **chọn Target "UnityPlayer.dll"** và nhấn vào nút Install.
+
+When installing for the first time, the installer might ask to you enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You will need to restart your computer after enabling for it to work.**
+
+Khi bạn cài đặt lần đầu, trình cài đặt có thể sẽ hỏi bạn có muốn bật DotLocal DLL redirection hay không. Nhấn OK và nó sẽ được bật lên cho bạn. **Bạn sẽ phải khởi động lại máy sau khi bật để nó có thể hoạt động.**
+
+- **Thủ công**
+1. Mở Command Prompt (Run as Administrator) và chạy lệnh sau:
+```
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options" /v DevOverrideEnable /t REG_DWORD /d 1
+```
+2. Khởi động lại máy.
+3. Tải về file `hachimi.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases).
+4. Trong thư mục cài đặt game, tạo một thư mục mới có tên là `umamusume.exe.local` và di chuyển file DLL mà bạn vừa tải về vào trong. Sửa tên lại thành `UnityPlayer.dll`.
+
+#### Cách 2: Plugin shimming (cri_mana_vpx.dll)
+
 Bạn sẽ phải cài đặt **cả hai** thứ này:
 
 - **Hachimi**
-    - Sử dụng trình cài đặt: Tải về file `hachimi_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases). Mở nó lên và nhấn vào nút Install. Không cần chỉnh sửa các tùy chọn nếu bạn không biết công dụng của chúng.
-    - Thủ công: Tải về file `hachimi.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases) và di chuyển nó vào `C:\Windows\System32`, đặt tên là `cri_mana_vpx.dll`.
+    - **Sử dụng trình cài đặt:** Tải về file `hachimi_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases). Mở nó lên, **chọn Target "cri_mana_vpx.dll"** và nhấn vào nút Install.
+    - **Thủ công:** Tải về file `hachimi.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases) và di chuyển nó vào `C:\Windows\System32`, đặt tên là `cri_mana_vpx.dll`.
 - **Shinmy (shim dành cho DMM)**
-    - Sử dụng trình cài đặt: Tải về file `shinmy_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Shinmy/releases). Mở nó lên và nhấn vào nút Install. Không cần chỉnh sửa các tùy chọn nếu bạn không biết công dụng của chúng. Trong trường hợp trình cài đặt không thể tìm thấy thư mục cài đặt của DMM, bạn sẽ phải tự chọn nó.
-    - Thủ công: Tải về file `shinmy_mallet.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Shinmy/releases) và di chuyển nó vào thư mục cài đặt DMM. Đổi tên thành `version.dll` hoặc `winhttp.dll`.
+    - **Sử dụng trình cài đặt:** Tải về file `shinmy_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Shinmy/releases). Mở nó lên và nhấn vào nút Install. Không cần chỉnh sửa các tùy chọn nếu bạn không biết công dụng của chúng. Trong trường hợp trình cài đặt không thể tìm thấy thư mục cài đặt của DMM, bạn sẽ phải tự chọn nó.
+    - **Thủ công:** Tải về file `shinmy_mallet.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Shinmy/releases) và di chuyển nó vào thư mục cài đặt DMM. Đổi tên thành `version.dll` hoặc `winhttp.dll`.
 
 ::: warning
 Sau khi cài đặt Shinmy, mỗi lần mà bạn mở DMM lên, nhiều chương trình có tên như `shinmy.exe` sẽ cố gắng chạy cùng nó. Hãy cho phép tất cả các chương trình đó chạy để shim có thể hoạt động đúng cách.

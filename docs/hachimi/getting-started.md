@@ -32,11 +32,13 @@ As of v0.13.0, Hachimi currently supports two loading methods with different ins
 
 #### Method 1: DotLocal DLL redirection (UnityPlayer.dll) (recommended)
 
+::: warning
+Some anti cheats such as Vanguard hates seeing DLL redirection enabled on your system, even if it doesn't affect the game it's trying to protect directly. Use method 2 or disable DLL redirection whenever you want to play a game that uses Vanguard or another anti cheat that checks for the same thing.
+:::
+
 - **Using the installer:** Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it, **choose "UnityPlayer.dll" as the target** and click on Install.
 
-::: info
 When installing for the first time, the installer might ask to you enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You will need to restart your computer after enabling for it to work.**
-:::
 
 - **Manually**
 1. Refer to the "Configure the registry" section in [this article](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry) to enable DLL redirection. Restart your computer after you're done.
