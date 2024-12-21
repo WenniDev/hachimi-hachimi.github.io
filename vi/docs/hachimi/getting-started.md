@@ -38,8 +38,6 @@ Một số ch.trình chống hack như Vanguard sẽ phát hiện bạn sử d�
 
 - Sử dụng trình cài đặt: Tải về file `hachimi_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases). Mở nó lên, **chọn Target "UnityPlayer.dll"** và nhấn vào nút Install.
 
-When installing for the first time, the installer might ask to you enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You will need to restart your computer after enabling for it to work.**
-
 Khi bạn cài đặt lần đầu, trình cài đặt có thể sẽ hỏi bạn có muốn bật DotLocal DLL redirection hay không. Nhấn OK và nó sẽ được bật lên cho bạn. **Bạn sẽ phải khởi động lại máy sau khi bật để nó có thể hoạt động.**
 
 - **Thủ công**
