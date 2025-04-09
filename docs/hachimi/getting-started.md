@@ -33,7 +33,7 @@ As of v0.13.0, Hachimi currently supports two loading methods with different ins
 #### Method 1: DotLocal DLL redirection (UnityPlayer.dll) (recommended)
 
 ::: warning
-Some anti cheats such as Vanguard hates seeing DLL redirection enabled on your system, even if it doesn't affect the game it's trying to protect directly. Use method 2 or disable DLL redirection whenever you want to play a game that uses Vanguard or another anti cheat that checks for the same thing.
+Some anti cheats such as Vanguard hates seeing DLL redirection enabled on your system, even if it doesn't affect the game it's trying to protect directly. Disable DLL redirection whenever you want to play a game that uses Vanguard or another anti cheat that checks for the same thing.
 :::
 
 - **Using the installer:** Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it, **choose "UnityPlayer.dll" as the target** and click on Install.
@@ -44,20 +44,17 @@ When installing for the first time, the installer might ask to you enable DotLoc
 1. Refer to the "Configure the registry" section in [this article](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-redirection#optional-configure-the-registry) to enable DLL redirection. Restart your computer after you're done.
 2. Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases).
 3. In the game install folder, create a new folder named `umamusume.exe.local` and move the downloaded DLL file there. Rename it to `UnityPlayer.dll`.
+4. Download the latest `cellar.dll` from the [Cellar Releases page](https://github.com/Hachimi-Hachimi/Cellar/releases).
+5. Move it to `umamusume.exe.local` and rename it to `apphelp.dll`.
+
+::: info
+Tip for people who wants to play LoL/Valorant: You'll need to disable DLL redirection every time you want to play those games. You can use this program to quickly enable/disable it: https://github.com/LeadRDRK/DotLocalToggle/releases. Run it until it says it has disabled DLL redirection and restart your computer.
+:::
 
 #### Method 2: Plugin shimming (cri_mana_vpx.dll)
 
-You'll need to install **both** of these things:
-
-- **Hachimi**
-    - **Using the installer:** Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it, **choose "cri_mana_vpx.dll" as the target** and click on Install.
-    - **Manually:** Download the latest `hachimi.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases) and put it in `C:\Windows\System32` as `cri_mana_vpx.dll`.
-- **Shinmy (DMM shim)**
-    - **Using the installer:** Download the latest `shinmy_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Shinmy/releases). Run it and click on Install. No need to modify any of the options if you don't know what they mean. In case the installer fails to detect DMM's install folder, you will need to select it manually.
-    - **Manually:** Download the latest `shinmy_mallet.dll` from the [Releases page](https://github.com/Hachimi-Hachimi/Shinmy/releases) and put it in DMM's install directory. Rename it to `version.dll` or `winhttp.dll`.
-
 ::: warning
-After installing Shinmy, every time you start DMM, multiple programs with a name similar to `shinmy.exe` will attempt to start along with the launcher. Please choose "Yes" on the UAC prompt for all of them if it shows up, this is required for the shim to work properly.
+This method is no longer working after a recent update. Please follow the guide below to migrate to method 1.
 :::
 
 #### Migrating from method 2 to method 1

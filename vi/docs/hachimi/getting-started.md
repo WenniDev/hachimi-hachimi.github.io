@@ -33,7 +33,7 @@ Tính đến phiên bản v0.13.0, Hachimi hiện đang hỗ trợ 2 cách chạ
 #### Cách 1: DotLocal DLL redirection (UnityPlayer.dll) (khuyên dùng)
 
 ::: warning
-Một số ch.trình chống hack như Vanguard sẽ phát hiện bạn sử dụng tính năng DLL redirection, ngay cả khi nó không ảnh hưởng trực tiếp đến game mà nó đăng bảo vệ. Sử dụng cách 2 hoặc tắt DLL redirection mỗi khi bạn muốn chơi game sử dụng Vanguard hoặc một ch.trình chống hack khác kiểm tra giống như vậy.
+Một số ch.trình chống hack như Vanguard sẽ phát hiện bạn sử dụng tính năng DLL redirection, ngay cả khi nó không ảnh hưởng trực tiếp đến game mà nó đăng bảo vệ. Tắt DLL redirection mỗi khi bạn muốn chơi game sử dụng Vanguard hoặc một ch.trình chống hack khác kiểm tra giống như vậy.
 :::
 
 - Sử dụng trình cài đặt: Tải về file `hachimi_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases). Mở nó lên, **chọn Target "UnityPlayer.dll"** và nhấn vào nút Install.
@@ -48,21 +48,21 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 2. Khởi động lại máy.
 3. Tải về file `hachimi.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases).
 4. Trong thư mục cài đặt game, tạo một thư mục mới có tên là `umamusume.exe.local` và di chuyển file DLL mà bạn vừa tải về vào trong. Sửa tên lại thành `UnityPlayer.dll`.
+4. Tải về file `cellar.dll` dành cho bản mới nhất từ [trang Releases của Cellar](https://github.com/Hachimi-Hachimi/Cellar/releases).
+5. Di chuyển nó vào `umamusume.exe.local` và sửa tên lại thành `apphelp.dll`.
+
+::: info
+Mẹo dành cho người chơi LoL/Valorant: Bạn sẽ phải tắt DLL redirection mỗi khi bạn muốn chơi LoL/Valorant. Bạn có thể dùng chương trình này để bật/tắt nó một cách nhanh chóng: https://github.com/LeadRDRK/DotLocalToggle/releases. Chỉ cần chạy nó (cho đến khi nó báo là đã "disabled") và khởi động lại máy.
+:::
 
 #### Cách 2: Plugin shimming (cri_mana_vpx.dll)
 
-Bạn sẽ phải cài đặt **cả hai** thứ này:
-
-- **Hachimi**
-    - **Sử dụng trình cài đặt:** Tải về file `hachimi_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases). Mở nó lên, **chọn Target "cri_mana_vpx.dll"** và nhấn vào nút Install.
-    - **Thủ công:** Tải về file `hachimi.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases) và di chuyển nó vào `C:\Windows\System32`, đặt tên là `cri_mana_vpx.dll`.
-- **Shinmy (shim dành cho DMM)**
-    - **Sử dụng trình cài đặt:** Tải về file `shinmy_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Shinmy/releases). Mở nó lên và nhấn vào nút Install. Không cần chỉnh sửa các tùy chọn nếu bạn không biết công dụng của chúng. Trong trường hợp trình cài đặt không thể tìm thấy thư mục cài đặt của DMM, bạn sẽ phải tự chọn nó.
-    - **Thủ công:** Tải về file `shinmy_mallet.dll` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Shinmy/releases) và di chuyển nó vào thư mục cài đặt DMM. Đổi tên thành `version.dll` hoặc `winhttp.dll`.
-
 ::: warning
-Sau khi cài đặt Shinmy, mỗi lần mà bạn mở DMM lên, nhiều chương trình có tên như `shinmy.exe` sẽ cố gắng chạy cùng nó. Hãy cho phép tất cả các chương trình đó chạy để shim có thể hoạt động đúng cách.
+Cách này không còn hoạt động trên phiên bản mới nhất của game. Xin hãy làm theo hướng dẫn bên dưới để chuyển sang sử dụng cách 1.
 :::
+
+#### Chuyển sang sử dụng cách 1 từ cách 2
+Xóa Shinmy trước bằng cách nhấn nút Uninstall trong chương trình cài đặt Shinmy. Sau đó, gỡ cài đặt Hachimi. Cài lại Hachimi bằng cách 1 theo hướng dẫn trên.
 
 ### Android
 
