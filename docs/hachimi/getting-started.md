@@ -36,6 +36,10 @@ As of v0.13.0, Hachimi currently supports two loading methods with different ins
 Some anti cheats such as Vanguard hates seeing DLL redirection enabled on your system, even if it doesn't affect the game it's trying to protect directly. Disable DLL redirection whenever you want to play a game that uses Vanguard or another anti cheat that checks for the same thing.
 :::
 
+::: info
+Game not launching after installing? Navigate to the game's install folder, right click on the game's exe file, open Properties, and enable **"Disable fullscreen optimizations"** in the Compatibility tab.
+:::
+
 - **Using the installer:** Download the latest `hachimi_installer.exe` from the [Releases page](https://github.com/Hachimi-Hachimi/Hachimi/releases). Run it, **choose "UnityPlayer.dll" as the target** and click on Install.
 
 When installing for the first time, the installer might ask to you enable DotLocal DLL redirection. Press OK and it will be enabled for you. **You will need to restart your computer after enabling for it to work.**

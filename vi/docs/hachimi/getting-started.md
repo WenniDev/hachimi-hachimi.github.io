@@ -36,6 +36,10 @@ Tính đến phiên bản v0.13.0, Hachimi hiện đang hỗ trợ 2 cách chạ
 Một số ch.trình chống hack như Vanguard sẽ phát hiện bạn sử dụng tính năng DLL redirection, ngay cả khi nó không ảnh hưởng trực tiếp đến game mà nó đăng bảo vệ. Tắt DLL redirection mỗi khi bạn muốn chơi game sử dụng Vanguard hoặc một ch.trình chống hack khác kiểm tra giống như vậy.
 :::
 
+::: info
+Nếu như game không chạy nữa sau khi bạn cài đặt Hachimi, hãy vào thư mục cài đặt game, nhấn chuột phải vào file .exe của game, mở Properties, và bật "Disable fullscreen optimizations" trong tab Compatibility.
+:::
+
 - Sử dụng trình cài đặt: Tải về file `hachimi_installer.exe` dành cho bản mới nhất từ [trang Releases](https://github.com/Hachimi-Hachimi/Hachimi/releases). Mở nó lên, **chọn Target "UnityPlayer.dll"** và nhấn vào nút Install.
 
 Khi bạn cài đặt lần đầu, trình cài đặt có thể sẽ hỏi bạn có muốn bật DotLocal DLL redirection hay không. Nhấn OK và nó sẽ được bật lên cho bạn. **Bạn sẽ phải khởi động lại máy sau khi bật để nó có thể hoạt động.**
