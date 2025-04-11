@@ -95,6 +95,10 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-cn'
     },
+    'zh-tw': {
+      label: '繁體中文',
+      lang: 'zh-tw'
+    },
     id: {
       label: 'Bahasa Indonesia',
       lang: 'id'
