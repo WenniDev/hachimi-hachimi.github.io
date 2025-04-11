@@ -40,7 +40,7 @@
 游戏在安装完成后无法运行？请定位到游戏的安装路径，右键游戏的exe文件，打开属性，转到兼容性选项卡，并打开**禁用全屏优化**。
 :::
 
-- **使用安装程序** 从[发布页面](https://github.com/Hachimi-Hachimi/Hachimi/releases)下载最新的`hachimi_installer.exe`，打开它，**在Target一栏选择UnityPlayer.dll**并点击Install。
+- **使用安装程序**：从[发布页面](https://github.com/Hachimi-Hachimi/Hachimi/releases)下载最新的`hachimi_installer.exe`，打开它，**在Target一栏选择UnityPlayer.dll**并点击Install。
 
 首次安装时，安装程序可能会向你询问是否开启DotLocal DLL redirection。点击OK，它就会为你启用此功能。**启用后，你必须重新启动你的计算机。**
 
@@ -58,7 +58,7 @@
 #### 方法2：Plugin shimming（插件兼容适配）（cri_mana_vpx.dll）
 
 ::: warning
-此方法在最近单子更新以后不再有效，请按照下面的指引迁移到方法1。
+此方法在最近的更新以后不再有效，请按照下面的指引迁移到方法1。
 :::
 
 #### 从方法2迁移到方法1
@@ -82,9 +82,9 @@
 
 1. 从[发布页面](https://github.com/LeadRDRK/UmaPatcher/releases)下载最新的UmaPatcher。
 2. 准备一个游戏的安装包，可以是以下几种：
-    - **Split APK files（拆分APK文件）:** 一个基础APK文件和其中一个拆分配置APK（config.arm64_v8a，config.armeabi-v7a等),
+    - **拆分APK文件:** 一个基础APK文件和其中一个拆分配置APK（config.arm64_v8a，config.armeabi-v7a等)，
     请仅选择适合您设备的拆分配置。
-    此功能目前仅限日语版使用。
+    此功能目前仅有日语版使用。
     - **单一APK文件**: 一个完整的，未拆分的APK文件。
     - **XAPK文件**: 一个包含拆分后的APK文件的ZIP压缩包（将扩展名重命名为了.xapk）。
 3. 运行UmaPatcher并选择“Normal Install”，并选择你已经准备好的游戏安装包。
