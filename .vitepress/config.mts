@@ -86,6 +86,14 @@ export default defineConfig({
     vi: {
       label: 'Tiếng Việt',
       lang: 'vi'
+    },
+    de: {
+      label: 'Deutsch',
+      lang: 'de'
+    },
+    'zh-cn': {
+      label: '简体中文',
+      lang: 'zh-cn'
     }
   }
 })
