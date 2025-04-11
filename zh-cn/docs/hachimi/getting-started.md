@@ -32,11 +32,11 @@
 
 #### 方法1：DotLocal DLL redirection（.local文件DLL重定向） （UnityPlayer.dll）（推荐使用）
 
-::: 注意事项
+::: warning
 部分反作弊系统（如Vanguard）对系统内启用的DLL重定向机制采取严苛监控策略，即便该操作不会直接影响其所保护的游戏运行。建议在游玩采用Vanguard等同类反作弊系统的游戏时，务必提前禁用DLL重定向功能。
 :::
 
-::: 说明
+::: info
 游戏在安装完成后无法运行？请定位到游戏的安装路径，右键游戏的exe文件，打开属性，转到兼容性选项卡，并打开**禁用全屏优化**。
 :::
 
@@ -51,7 +51,7 @@
 4. 从[Cellar发布页面](https://github.com/Hachimi-Hachimi/Cellar/releases)下载最新的`cellar.dll`。
 5. 将其移动至`umamusume.exe.local`并命名为`apphelp.dll`.
 
-::: 说明
+::: info
 给想玩英雄联盟（LoL）以及无畏契约（Valorant）的玩家的一些提示：当你每次想玩这些游戏时，你都要禁用DLL重定向。你可以使用这个程序去快速启用/禁用它：https://github.com/LeadRDRK/DotLocalToggle/releases 运行它，直到它显示已禁用DLL重定向，然后重新启动计算机。
 :::
 
@@ -72,11 +72,11 @@
 
 最简单的方法是使用[UmaPatcher](https://github.com/LeadRDRK/UmaPatcher)，它会自动帮你修改apk文件，建议在使用此功能前，确保未提前安装原版游戏。
 
-::: 危险
+::: danger
 若您已安装原版游戏，首次安装修改版前必须将其卸载。后续更新时，可直接安装新版修改版而无需卸载。
 :::
 
-::: 危险
+::: danger
 请不要从APKPure下载你的apk，这样会导致一些问题。
 :::
 

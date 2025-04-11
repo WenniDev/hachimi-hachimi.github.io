@@ -72,11 +72,11 @@ Setelah itu, kamu bisa menginstall Hachimi secara normal.
 
 Cara termudah menggunakan [UmaPatcher](https://github.com/LeadRDRK/UmaPatcher) yang akan memodifikasi APK untuk kamu. Disarankan agar kamu tidak mengisntall gamenya terlebih dahulu.
 
-::: warning
+::: danger
 Jika kamu sudah menginstall gamenya, kamu harus uninstall sebelum menginstal versi yang telah dipatch untuk pertama kalinya. Kamu bisa memperbarui game tersebut nantinya tanpa uninstall dengan menginstal versi patch lainnya (terbaru).
 :::
 
-::: warning
+::: danger
 Jangan download APK dari APKPure, akan ada masalah nantinya.
 :::
 
