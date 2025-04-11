@@ -32,11 +32,11 @@ Mulai dari versi v0.13.0, Hachimi saat ini mendukung dua metode dengan prosedur 
 
 #### Metode 1: DotLocal DLL redirection (UnityPlayer.dll) (sangat direkomendasikan)
 
-::: peringatan
+::: warning
 Beberapa anti cheat seperti Vanguard tidak cocok dengan redirect DLL diaktifkan, meski pun itu tidak berpengaruh terhadap game tersebut. Nonaktifkan redirect DLL setiap kali kamu ingin bermain game yang menggunakan Vanguard atau anti cheat lain yang melakukan hal yang sama.
 :::
 
-::: informasi
+::: info
 Game tidak bisa berjalan setelah terinstall? Terlebih dahulu buka folder instalasi game, klik kanan pada file exe game, buka Properties, dan aktifkan **"Disable fullscreen optimizations"** di tab Compatibility.
 :::
 
@@ -51,13 +51,13 @@ Ketika menginstall pertamakali, installer akan meminta permintaan untuk enable D
 4. Download `cellar.dll` terbaru dari [Cellar Releases page](https://github.com/Hachimi-Hachimi/Cellar/releases).
 5. Pindahkan `umamusume.exe.local` ganti nama menjadi `apphelp.dll`.
 
-::: informasi
+::: info
 Tips untuk kamu yang ingin bermain LoL/Valorant: Kamu harus disable DLL redirection setiap kali kamu ingin bermain game tersebut. Kamu bisa dengan mudah langsung enable/disable menggunakan: https://github.com/LeadRDRK/DotLocalToggle/releases. Jalankan sampai muncul disabled DLL redirection dan restar komputer kamu.
 :::
 
 #### Metode 2: Plugin shimming (cri_mana_vpx.dll)
 
-::: peringatan
+::: warning
 Metode ini sudah tidak lagi berjalan. Silakan ikuti cara di bawah untuk cara migrasi ke metode 1.
 :::
 
@@ -72,11 +72,11 @@ Setelah itu, kamu bisa menginstall Hachimi secara normal.
 
 Cara termudah menggunakan [UmaPatcher](https://github.com/LeadRDRK/UmaPatcher) yang akan memodifikasi APK untuk kamu. Disarankan agar kamu tidak mengisntall gamenya terlebih dahulu.
 
-::: peringatan
+::: warning
 Jika kamu sudah menginstall gamenya, kamu harus uninstall sebelum menginstal versi yang telah dipatch untuk pertama kalinya. Kamu bisa memperbarui game tersebut nantinya tanpa uninstall dengan menginstal versi patch lainnya (terbaru).
 :::
 
-::: peringatan
+::: warning
 Jangan download APK dari APKPure, akan ada masalah nantinya.
 :::
 
