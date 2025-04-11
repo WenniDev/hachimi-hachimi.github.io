@@ -1,4 +1,11 @@
 # Getting started
+<small>
+
+View this page in other languages:
+
+[Tiếng Việt](/vi/docs/hachimi/getting-started.html) | [Deustch](/de/docs/hachimi/getting-started.html) | [简体中文](/zh-cn/docs/hachimi/getting-started.html) | [Bahasa Indonesia](/id/docs/hachimi/getting-started.html)
+
+</small>
 
 ## Compatibility
 
