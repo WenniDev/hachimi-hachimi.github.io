@@ -25,8 +25,8 @@ MDB 指的是 `master.mdb`，這是遊戲用來儲存各類資料的資料庫檔
 - `character_system_text`：包含角色在各種遊戲介面（例如主畫面）上所說的台詞。
 - `race_jikkyo_comment` 與 `race_jikkyo_message`：比賽旁白與實況用語。
 
-## 資產字典  
-共有五種資產字典類型：
+## 素材字典  
+共有五種素材字典類型：
 
 - 劇情字典（用於主線劇情、訓練事件、主畫面互動）：`assets/story/data/??/????/storytimeline_*.json` 和 `assets/home/data/?????/??/hometimeline_*.json`
 - 比賽劇情字典（主線劇情中賽事的過場動畫）：`assets/race/storyrace/text/storyrace_*.json`
@@ -37,10 +37,10 @@ MDB 指的是 `master.mdb`，這是遊戲用來儲存各類資料的資料庫檔
 除了歌詞字典以外，這些字典都允許指定各平台的資源包（bundle）hash。這個 hash 會用來判斷資源是否已更新，若不一致就會跳過載入該筆翻譯，避免翻譯內容與實際資源不符。
 
 ## 紋理替換  
-紋理會依據原始資產的類型分門別類進行替換。大多數情況會使用 `.png` 檔案來取代原始紋理，分類如下：
+紋理會依據原素材的類型分門別類進行替換。大多數情況會使用 `.png` 檔案來取代原始紋理，分類如下：
 
 - `atlas`：UI 精靈圖集的紋理。相關 metadata 存於同名 `.json` 字典。路徑：`assets/atlas/*/*.png`
-- `an_texture_sets`：動畫 UI 的圖集紋理，包含在 `uianimation` 資源包中。可用 `uianimation` 資產字典提供 metadata。路徑：`assets/an_texture_sets/as_uMeshParam_fl_*/tx_uTex_fl_*.png`
+- `an_texture_sets`：動畫 UI 的圖集紋理，包含在 `uianimation` 資源包中。可用 `uianimation` 素材字典提供 metadata。路徑：`assets/an_texture_sets/as_uMeshParam_fl_*/tx_uTex_fl_*.png`
 - `textures`：一般用途紋理，供 UI 或 3D 模型使用。此類紋理的替換檔案格式會依照原始檔案決定，UI 多為 `.png`，3D 模型則常為 `.tga`。路徑：`assets/textures/*`
 
 所有紋理都可以用 `.diff.png` 的差分圖來替換。這是一種特殊格式，基於 PNG，只包含與原始圖像的差異，這樣可避免版權問題。
@@ -54,9 +54,9 @@ MDB 指的是 `master.mdb`，這是遊戲用來儲存各類資料的資料庫檔
 
 ## 翻譯載入流程  
 設定檔、localize dict、hashed dict 與 MDB 字典會在遊戲啟動時立即載入；當你選擇重新載入翻譯資料時，也只會重新載入這些內容。  
-其他與遊戲資產相關的內容，則會在遊戲每次載入對應資源時（重新）載入。
+其他與遊戲素材相關的內容，則會在遊戲每次載入對應資源時（重新）載入。
 
-資產字典會在套用前檢查資源包的 hash。若 hash 不一致，就會忽略該筆翻譯；若字典中未指定 hash，則會跳過這個檢查。
+素材字典會在套用前檢查資源包的 hash。若 hash 不一致，就會忽略該筆翻譯；若字典中未指定 hash，則會跳過這個檢查。
 
 紋理替換則有一套特殊的載入流程。當資源被載入時，系統會先尋找對應的 `.diff.png` 差分圖；找不到時再改找 `.png` 檔案。如果找到差分圖，它會比對該 `.png` 檔案的最後修改時間：  
 - 如果 `.png` 的修改時間比差分圖還晚，會直接使用 `.png`；
