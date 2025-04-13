@@ -102,6 +102,10 @@ export default defineConfig({
     id: {
       label: 'Bahasa Indonesia',
       lang: 'id'
+    },
+    fr: {
+      label: 'Français',
+      lang: 'fr'
     }
   }
 })
